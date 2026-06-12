@@ -1,5 +1,7 @@
 # OMNI — 암호화폐 자동매매 시스템 3세대 (아카이브)
 
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white) ![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white) ![Google Gemini](https://img.shields.io/badge/Google_Gemini-8E75B2?style=for-the-badge&logo=googlegemini&logoColor=white) ![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
+
 > VALKYR → ARGOS → **OMNI** → METIS → HERMES → KAIROS → ATHENA
 > 전체 계보: [github.com/deltaomega02](https://github.com/deltaomega02)
 
