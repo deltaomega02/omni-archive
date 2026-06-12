@@ -1,12 +1,42 @@
 # OMNI — 암호화폐 자동매매 시스템 3세대 (아카이브)
 
 > VALKYR → ARGOS → **OMNI** → METIS → HERMES → KAIROS → ATHENA
+> 전체 계보: [github.com/deltaomega02](https://github.com/deltaomega02)
 
-OODA 루프(Observe-Orient-Decide-Act)와 매매 교훈을 축적하는 학습 시스템(lessons)을
-도입한 세대. 자기 학습 구조는 이후 ATHENA에서 부활.
+**OODA 루프(Observe–Orient–Decide–Act)와 자기 학습 시스템을 도입**한 세대.
+2세대(ARGOS)의 CoT 추론은 매번 판단이 일회성으로 끝났다 — OMNI는 매매가 끝날 때마다
+결과를 회고해 교훈(lessons)으로 축적하고, 다음 판단의 프롬프트에 주입하는 학습 루프를 시도했다.
 
-- `OMNI/` — 메인 시스템
-- `OMNI-XRP/` — XRP 특화 버전
-- `OMNI-프렉탈 기반/` — 프랙탈 분석 실험 버전
+## 기술 스택
 
-스택: Python · OpenAI/Gemini API · Streamlit
+Python · OpenAI / Gemini API · Upbit API · Streamlit
+
+## 동작 방식
+
+```
+Observe   시세·지표·뉴스 수집
+Orient    AI가 시장 상황 해석 (+ 누적된 lessons를 컨텍스트로 주입)
+Decide    진입/청산/관망 결정
+Act       주문 실행
+  ↓ 매매 종료 후
+Reflect   거래 결과 회고 → 교훈 추출 → lessons에 누적 → 다음 Orient에 반영
+```
+
+5단계 파이프라인으로 "분석 → 실행 → 학습"이 한 사이클을 이루는 구조.
+
+## 폴더 가이드
+
+| 폴더 | 내용 |
+|---|---|
+| `OMNI/` | 메인 시스템 (OODA 파이프라인, 모듈 구조: core / dashboard) |
+| `OMNI-XRP/` | XRP 단일 코인 특화 버전 (버전별 메인·대시보드 변천 포함) |
+| `OMNI-fractal/` | 프랙탈(다중 시간대) 분석 실험 분기 |
+
+## 이 세대가 다음 세대에 넘긴 것
+
+- 회고→학습 루프: 7세대 ATHENA의 학습 시스템으로 부활
+- 학습의 부작용도 발견 — 적은 표본의 교훈이 과적합을 만들 수 있다는 것. 이후 세대가 "교훈 자동 반영"에 신중해진 이유.
+
+## 면책
+
+연구·학습 목적의 개인 프로젝트 아카이브입니다.
