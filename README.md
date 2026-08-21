@@ -5,9 +5,13 @@
 > VALKYR → ARGOS → **OMNI** → METIS → HERMES → KAIROS → ATHENA
 > 전체 계보: [github.com/deltaomega02](https://github.com/deltaomega02)
 
-**OODA 루프(Observe–Orient–Decide–Act)와 자기 학습 시스템을 도입**한 세대.
-2세대(ARGOS)의 CoT 추론은 매번 판단이 일회성으로 끝났다 — OMNI는 매매가 끝날 때마다
-결과를 회고해 교훈(lessons)으로 축적하고, 다음 판단의 프롬프트에 주입하는 학습 루프를 시도했다.
+**OODA 루프(Observe–Orient–Decide–Act)로 매매 주기를 구조화**한 세대.
+매매가 끝날 때마다 결과를 회고해 교훈(lessons)으로 축적하고, 다음 판단의 프롬프트에
+주입하는 학습 루프를 붙였다.
+
+> 회고 루프 자체는 OMNI 가 처음이 아니다. 1세대 VALKYR 에 이미 회고를 DB 에 쌓고
+> 패턴을 뽑는 코드가 있었다(`valkyr/Ver_3.0.0/vk_3_0_0.py:101,107`).
+> OMNI 의 기여는 그것을 **OODA 라는 명시적 주기 안에 넣어 매 사이클 강제한 것**이다.
 
 ## 기술 스택
 
